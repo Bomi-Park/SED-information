@@ -1,5 +1,6 @@
 # BC03 (Bruzual1 & Charlot2 2003); model based
-wget http://www.bruzual.org/bc03/bc03.doc.tar.gz  #Latest information: http://www.iap.fr/useriap/charlot/
+# Latest information: http://www.iap.fr/useriap/charlot/
+wget http://www.bruzual.org/bc03/bc03.doc.tar.gz  
 wget http://www.bruzual.org/bc03/Updated_version_2016/BC03_basel_{TopHeavyIMF,chabrier,kroupa,salpeter}.tgz 
 wget http://www.bruzual.org/bc03/Updated_version_2016/BC03_miles_{TopHeavyIMF,chabrier,kroupa,salpeter}.tgz
 wget http://www.bruzual.org/bc03/Updated_version_2016/BC03_stelib_{TopHeavyIMF,chabrier,kroupa,salpeter}.tgz
