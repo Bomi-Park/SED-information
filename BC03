@@ -1,2 +1,7 @@
 # BC03 (Bruzual1 & Charlot2 2003); model based
 wget http://www.bruzual.org/bc03/bc03.doc.tar.gz  #Latest information: http://www.iap.fr/useriap/charlot/
+
+gzip -d bc03.doc.tar.gz
+tar -xvf bc03.doc.tar
+
+cd bc03
