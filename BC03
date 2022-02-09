@@ -1,14 +1,21 @@
 # BC03 (Bruzual1 & Charlot2 2003); model based
 # Latest information: http://www.iap.fr/useriap/charlot/
-wget http://www.bruzual.org/bc03/bc03.doc.tar.gz  
-wget http://www.bruzual.org/bc03/Updated_version_2016/BC03_basel_{TopHeavyIMF,chabrier,kroupa,salpeter}.tgz 
-wget http://www.bruzual.org/bc03/Updated_version_2016/BC03_miles_{TopHeavyIMF,chabrier,kroupa,salpeter}.tgz
-wget http://www.bruzual.org/bc03/Updated_version_2016/BC03_stelib_{TopHeavyIMF,chabrier,kroupa,salpeter}.tgz
-wget http://www.bruzual.org/bc03/Updated_version_2016/src.tgz
 
+wget http://www.bruzual.org/bc03/bc03.doc.tar.gz
+wget http://www.bruzual.org/bc03/Updated_version_2016/src.tgz
 gzip -d bc03.doc.tar.gz
 tar -xvf bc03.doc.tar
+tar -xvf src.tgz
+rm bc03.doc.tar src.tgz
 
-cd bc03/doc
+wget http://www.bruzual.org/bc03/Updated_version_2016/BC03_basel_{TopHeavyIMF,chabrier,kroupa,salpeter}.tgz -P ./bc03/models
+wget http://www.bruzual.org/bc03/Updated_version_2016/BC03_miles_{TopHeavyIMF,chabrier,kroupa,salpeter}.tgz -P ./bc03/models
+wget http://www.bruzual.org/bc03/Updated_version_2016/BC03_stelib_{TopHeavyIMF,chabrier,kroupa,salpeter}.tgz -P ./bc03/models
+
+cd bc03/models/
+find . -name "*.tgz" -exec tar xvfz {} \;
+
+cd ../doc
 gzip -d bc03.ps.gz
+#if you check the bc03.ps, then just type 'evince bc03.ps &'
 
