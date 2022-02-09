@@ -1,0 +1,14 @@
+# Download and use CIGALE
+# Check the latest version: https://cigale.lam.fr/download/
+# Python 3.4 or higher must be installed in your computer(especially, anaconda).
+
+wget https://gitlab.lam.fr/cigale/cigale/-/archive/v2022.0/cigale-v2022.0.tar.gz   #OR check the latest version
+gzip -d cigale-v2022.0.tar.gz
+tar -xvf cigale-v2022.0.tar
+
+cd cigale-v2022.0
+conda create -n py3 python=3.9.7 anaconda
+source activate py3
+
+python setup.py build
+python setup.py develop
