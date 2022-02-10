@@ -8,7 +8,10 @@ tar -xvf cigale-v2022.0.tar
 
 cd cigale-v2022.0
 conda create -n py3 python=3.9.7 anaconda
-source activate py3
+source activate py3   #move to new prompt
 
 python setup.py build
 python setup.py develop
+
+pcigale init
+
