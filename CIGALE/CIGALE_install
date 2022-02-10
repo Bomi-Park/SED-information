@@ -12,6 +12,3 @@ source activate py3   #move to new prompt
 
 python setup.py build
 python setup.py develop
-
-pcigale init
-
