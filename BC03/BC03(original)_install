@@ -7,3 +7,7 @@ wget http://www.bruzual.org/bc03/Original_version_2003/bc03.pickles_library_mode
 wget http://www.bruzual.org/bc03/Original_version_2003/bc03.templates.tar.gz -P ./bc03/models
 
 wget http://www.bruzual.org/bc03/Original_version_2003/src.tgz -P ./bc03/src
+
+cd bc03/
+gzip -dr test_dir
+find . -name "*tar" -exec gzip d {} \;
