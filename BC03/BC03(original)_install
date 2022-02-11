@@ -9,5 +9,14 @@ wget http://www.bruzual.org/bc03/Original_version_2003/bc03.templates.tar.gz -P 
 wget http://www.bruzual.org/bc03/Original_version_2003/src.tgz -P ./bc03/src
 
 cd bc03/
-gzip -dr test_dir
-find . -name "*tar" -exec gzip d {} \;
+gzip -dr models/
+gzip -dr src/
+
+cd models/
+find . -name "*.tar" -exec tar xvf {} \;
+
+cd ../src
+find . -name "*.tar" -exec tar xvf {} \;
+cd bc03
+mv src ../
+rm -r ../bc03/
