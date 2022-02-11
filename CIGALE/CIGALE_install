@@ -7,8 +7,12 @@ gzip -d cigale-v2022.0.tar.gz
 tar -xvf cigale-v2022.0.tar
 
 cd cigale-v2022.0
-conda create -n py3 python=3.9.7 anaconda
+conda3 update anaconda
+conda3 create -n py3 python=3.9.7 anaconda
 source activate py3   #move to new prompt
 
-python setup.py build
-python setup.py develop
+svn export https://github.com/Bomi-Park/SED-information/trunk/CIGALE/Filters
+mv Filters/* database_builder/filters/
+
+python3 setup.py build
+python3 setup.py develop
