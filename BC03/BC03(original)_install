@@ -1,22 +1,25 @@
 # Bruzual & Charlot 2003 original version
 
-wget http://www.bruzual.org/bc03/Original_version_2003/bc03.models.geneva_1994_{chabrier,salpeter}_imf.tar.gz -P ./bc03/models
-wget http://www.bruzual.org/bc03/Original_version_2003/bc03.models.padova_1994_{chabrier,salpeter}_imf.tar.gz -P ./bc03/models
-wget http://www.bruzual.org/bc03/Original_version_2003/bc03.models.padova_2000_{chabrier,salpeter}_imf.tar.gz -P ./bc03/models
-wget http://www.bruzual.org/bc03/Original_version_2003/bc03.pickles_library_models.tar.gz -P ./bc03/models
-wget http://www.bruzual.org/bc03/Original_version_2003/bc03.templates.tar.gz -P ./bc03/models
+wget http://www.bruzual.org/bc03/Original_version_2003/bc03.models.geneva_1994_{chabrier,salpeter}_imf.tar.gz -P ./bc03/models_temp
+wget http://www.bruzual.org/bc03/Original_version_2003/bc03.models.padova_1994_{chabrier,salpeter}_imf.tar.gz -P ./bc03/models_temp
+wget http://www.bruzual.org/bc03/Original_version_2003/bc03.models.padova_2000_{chabrier,salpeter}_imf.tar.gz -P ./bc03/models_temp
+wget http://www.bruzual.org/bc03/Original_version_2003/bc03.pickles_library_models.tar.gz -P ./bc03/models_temp
+wget http://www.bruzual.org/bc03/Original_version_2003/bc03.templates.tar.gz -P ./bc03/models_temp
 
-wget http://www.bruzual.org/bc03/Original_version_2003/src.tgz -P ./bc03/src
+wget http://www.bruzual.org/bc03/Original_version_2003/src.tgz -P ./bc03/src_temp
 
 cd bc03/
-gzip -dr models/
-gzip -dr src/
+gzip -dr models_temp/
+gzip -dr src_temp/
 
-cd models/
+cd models_temp/
 find . -name "*.tar" -exec tar xvf {} \;
+mv bc03/*/ ../
+rm -r ../models_temp/
 
-cd ../src
+cd ../src_temp
 find . -name "*.tar" -exec tar xvf {} \;
 cd bc03
-mv src ../
-rm -r ../bc03/
+mv src ../../
+rm -r ../../src_temp/
+
