@@ -1,4 +1,5 @@
 # Bruzual & Charlot 2003 original version
+# Latest information: http://www.iap.fr/useriap/charlot/
 
 wget http://www.bruzual.org/bc03/Original_version_2003/bc03.models.geneva_1994_{chabrier,salpeter}_imf.tar.gz -P ./bc03/models_temp
 wget http://www.bruzual.org/bc03/Original_version_2003/bc03.models.padova_1994_{chabrier,salpeter}_imf.tar.gz -P ./bc03/models_temp
