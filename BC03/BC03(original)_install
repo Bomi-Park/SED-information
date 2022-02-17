@@ -24,3 +24,7 @@ cd bc03
 mv src ../../
 rm -r ../../src_temp/
 
+# Unzip files
+
+cd ../models/Padova1994/chabrier
+gzip -d *.gz
