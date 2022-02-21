@@ -1,0 +1,12 @@
+# Explanation of file names and program command.
+
+1. **.ised
+They are binary file which is readable in computer. (But human can't read)
+If you want transform it to 'ASCII' file, just use
+>> ascii_ised **.ised
+
+2. **.ised_ASCII
+They are ASCII file wich is readable for human. (But computer can't read)
+If you want transform it to 'binary' file, just use
+>> bin_ised **.ised_ASCII
+
