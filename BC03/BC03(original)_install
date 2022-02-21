@@ -28,3 +28,6 @@ rm -r ../../src_temp/
 
 cd ../models/Padova1994/chabrier
 gzip -d *.gz
+
+
+# You can follow "chap.3 PROGRAMS" in 'bc03.pdf' for next steps
