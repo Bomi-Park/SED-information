@@ -32,3 +32,14 @@ gzip -d *.gz
 
 
 # You can follow "chap.3 PROGRAMS" in 'bc03.pdf' for next steps
+# If you use 'bash' shell, then follow the steps below.
+
+vi ~/.bashrc
+(bashrc) export bc03='Full_path_of_bc03_src_directory'
+
+cd $bc03
+source ./.bc_bash
+make all
+
+# How to command
+$bc03/command
